@@ -1,0 +1,12 @@
+bin
+bin-int
+Dependencies/*/bin
+Dependencies/*/bin-int
+Fractalis/Log
+
+.vs
+**.pdp
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
