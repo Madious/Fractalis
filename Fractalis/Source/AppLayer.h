@@ -27,7 +27,7 @@ namespace SNG
 		alignas(4) Fractal Fractal = Fractal::Julia;
 		alignas(4) Color Color = Color::Cosmic;
 		alignas(16) Complex C;
-		alignas(4) int MaxIteration = 80;
+		alignas(4) int MaxIteration = 30;
 		alignas(4) float Zoom = 1.0f;
 		alignas(16) glm::dvec2 Offset = Vec2(0.0);
 	};
@@ -48,5 +48,8 @@ namespace SNG
 		Ref<Image> m_Image;
 		Ref<Buffer> m_SSBOBuffer;
 		Ref<ComputeShader> m_ComputeShader;
+
+		float m_ZoomSpeed = 1.0f;
+		float m_TranslationSpeed = 1.0f;
 	};
 }
