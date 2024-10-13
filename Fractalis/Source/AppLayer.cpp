@@ -56,10 +56,10 @@ namespace SNG
 
 		// Color choice
 		ImGui::Text("Color"); ImGui::SameLine();
-		const char* colors[4] = { "Temperature", "Ocean", "Fire", "Black and white" };
+		const char* colors[5] = { "Cosmic", "Temperature", "Ocean", "Fire", "Black and white" };
 		if (ImGui::BeginCombo("##Color", colors[(int)m_SSBO.Color]))
 		{
-			for (int i = 0; i < 4; i++)
+			for (int i = 0; i < 5; i++)
 			{
 				bool selected = (int)m_SSBO.Color == i;
 				if (ImGui::Selectable(colors[i], &selected))
@@ -74,10 +74,8 @@ namespace SNG
 		{
 			ImGui::Text("Re"); ImGui::SameLine();
 			ImGui::DragScalar("##Re", ImGuiDataType_Double, &m_SSBO.C.Re, 0.001f);
-
 			ImGui::Text("Im"); ImGui::SameLine();
 			ImGui::DragScalar("##Im", ImGuiDataType_Double, &m_SSBO.C.Im, 0.001f);
-			ImGui::SameLine(); ImGui::Text("i");
 		}
 
 		ImGui::Text("Max Iteration"); ImGui::SameLine();

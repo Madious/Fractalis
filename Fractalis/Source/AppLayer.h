@@ -13,7 +13,7 @@ namespace SNG
 
 	enum class Color
 	{
-		Temperature, Ocean, Fire, BlackAndWhite
+		Cosmic, Temperature, Ocean, Fire, BlackAndWhite
 	};
 
 	struct Complex
@@ -25,7 +25,7 @@ namespace SNG
 	struct SSBO
 	{
 		alignas(4) Fractal Fractal = Fractal::Julia;
-		alignas(4) Color Color = Color::Temperature;
+		alignas(4) Color Color = Color::Cosmic;
 		alignas(16) Complex C;
 		alignas(4) int MaxIteration = 80;
 		alignas(4) float Zoom = 1.0f;

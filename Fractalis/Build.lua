@@ -1,6 +1,5 @@
 
 project "Fractalis"
-	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++20"
 	staticruntime "off"
@@ -37,16 +36,19 @@ project "Fractalis"
 		defines "SNG_PLATFORM_WINDOWS"
 
 	filter "configurations:Debug"
+		kind "ConsoleApp"
 		defines "SNG_DEBUG"
 		runtime "Debug"
 		symbols "on"
 
 	filter "configurations:Release"
+		kind "ConsoleApp"
 		defines "SNG_RELEASE"
 		runtime "Release"
 		optimize "on"
 
 	filter "configurations:Dist"
+		kind "WindowedApp"
 		defines "SNG_DIST"
 		runtime "Release"
 		optimize "on"
